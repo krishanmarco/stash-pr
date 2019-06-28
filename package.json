@@ -1,0 +1,34 @@
+{
+  "name": "stash-pr",
+  "version": "1.0.0",
+  "description": "Open PR's through the bitbucket API",
+  "main": "src/cli.js",
+  "bin": {
+    "stash-pr": "./src/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://www.google.com"
+  },
+  "keywords": [
+    "bitbucket",
+    "atlassian",
+    "api",
+    "stash",
+    "pr",
+    "pull-request"
+  ],
+  "author": "Krishan Marco Madan",
+  "license": "ISC",
+  "dependencies": {
+    "external-editor": "^3.0.3",
+    "git-branch": "^2.0.1",
+    "lodash": "^4.17.11",
+    "minimist": "^1.2.0",
+    "node-fetch": "^2.6.0",
+    "parse-git-config": "^3.0.0"
+  }
+}
