@@ -1,11 +1,9 @@
 {
   "name": "stash-pr",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Open PR's through the bitbucket API",
   "main": "src/cli.js",
-  "bin": {
-    "stash-pr": "./src/cli.js"
-  },
+  "bin": "src/cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
