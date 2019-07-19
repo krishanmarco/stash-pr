@@ -1,6 +1,6 @@
 {
   "name": "stash-pr",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Open PR's through the bitbucket API",
   "main": "src/cli.js",
   "bin": "src/cli.js",
