@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const _ = require('lodash');
 const minimist = require('minimist');
 const openPr = require('./open-pr.js');
@@ -12,12 +14,20 @@ async function getLine(info, defaultValue) {
   });
 
   const defaultStr = !_.isEmpty(defaultValue) ? ` [default: ${defaultValue}]` : '';
-  const result = await new Promise(resolve => rl.question(`${info}${defaultStr}: `, resolve))
-    .finally(() => rl.close());
 
-  return !_.isEmpty(result)
-    ? result
-    : defaultValue;
+  try {
+    const result = await new Promise(resolve => rl.question(`${info}${defaultStr}: `, resolve));
+    if (!_.isEmpty(result)) {
+      return result;
+    }
+
+  } catch (e) {
+    // Do nothing
+  } finally {
+    rl.close();
+  }
+
+  return defaultValue;
 }
 
 async function getEditorInput(info) {
